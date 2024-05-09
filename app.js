@@ -61,7 +61,15 @@ function takeCommand(message) {
     } else if (message.includes("open facebook")) {
         window.open("https://facebook.com", "_blank");
         speak("Opening Facebook...");
-    }     else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
+    } else if(message.includes("open Linkedin")){ /*New Link to LinkedIn */
+        window.open("https://www.linkedin.com","_blank");
+        speak("Opening Linkedin");
+    }
+    else if(message.includes("open instagram")){ /*New Link to Instagram*/
+        window.open("https://www.instagram.com","_blank");
+        speak("Opening Instagram");
+    }
+    else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "This is what I found on the internet regarding " + message;
         speak(finalText);
@@ -84,10 +92,12 @@ function takeCommand(message) {
     }  else if (message.includes('wordpad')) {
             window.open('WordPad:///');
             const finalText = 'Opening Word Pad';
-            speak(finalText);    
-    } else {
+            speak(finalText);  
+    }
+    else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "I found some information for " + message + " on Google";
         speak(finalText);
     }
+    
 }
