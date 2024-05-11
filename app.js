@@ -85,10 +85,6 @@ function takeCommand(message) {
             window.open('WordPad:///');
             const finalText = 'Opening Word Pad';
             speak(finalText);    
-    } 
-    else if(message.includes('send an email')){
-        const q = "Alright sir, please provide me their email!";
-        speak(q);
     }
     else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
