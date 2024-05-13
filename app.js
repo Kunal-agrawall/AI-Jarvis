@@ -1,6 +1,12 @@
-const btn = document.querySelector('.talk');
-const content = document.querySelector('.content');
+// app.js
 
+// Constants for DOM elements
+const content = document.querySelector('.content');
+const contentContainer = document.querySelector('.content-container');
+const button = document.querySelector('.talk');
+
+
+// Function to initialize speech synthesis
 function speak(text) {
     const text_speak = new SpeechSynthesisUtterance(text);
 
@@ -11,28 +17,30 @@ function speak(text) {
     window.speechSynthesis.speak(text_speak);
 }
 
+// Function to greet the user based on time
 function wishMe() {
     var day = new Date();
     var hour = day.getHours();
 
     if (hour >= 0 && hour < 12) {
         speak("Good Morning Boss...");
-        speak("How may I help you?")
+        speak("How may I help you?");
     } else if (hour >= 12 && hour < 17) {
         speak("Good Afternoon Sir...");
-        speak("How may I help you?")
+        speak("How may I help you?");
     } else {
         speak("Good Evening Sir...");
-        speak("How may I help you?")
+        speak("How may I help you?");
     }
 }
 
-window.addEventListener('load', () => {
-    speak("Initializing JARVIS...");
-    wishMe();
+// Event listener for the "Click here to speak" button
+contentContainer.addEventListener('click', () => {
+    content.textContent = "Listening...";
+    recognition.start();
 });
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+// Speech recognition functionality
 const recognition = new SpeechRecognition();
 
 recognition.onresult = (event) => {
@@ -42,16 +50,12 @@ recognition.onresult = (event) => {
     takeCommand(transcript.toLowerCase());
 };
 
-btn.addEventListener('click', () => {
-    content.textContent = "Listening...";
-    recognition.start();
-});
-
+// Function to process user commands
 function takeCommand(message) {
     if (message.includes('hey') || message.includes('hello')) {
         speak("Hello Sir, How May I Help You?");
-    } else if (message.includes('who am i?') || message.includes('who is your master?') ||  message.includes("who created you?")) {
-        speak("You are kunal agrawal,my master, who created me.");      
+    } else if (message.includes('who am i?') || message.includes('who is your master?') || message.includes("who created you?")) {
+        speak("You are kunal agrawal,my master, who created me.");
     } else if (message.includes("open google")) {
         window.open("https://google.com", "_blank");
         speak("Opening Google...");
@@ -61,7 +65,7 @@ function takeCommand(message) {
     } else if (message.includes("open facebook")) {
         window.open("https://facebook.com", "_blank");
         speak("Opening Facebook...");
-    }     else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
+    } else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "This is what I found on the internet regarding " + message;
         speak(finalText);
@@ -81,13 +85,17 @@ function takeCommand(message) {
         window.open('Calculator:///');
         const finalText = "Opening Calculator";
         speak(finalText);
-    }  else if (message.includes('wordpad')) {
-            window.open('WordPad:///');
-            const finalText = 'Opening Word Pad';
-            speak(finalText);    
+    } else if (message.includes('wordpad')) {
+        window.open('WordPad:///');
+        const finalText = 'Opening Word Pad';
+        speak(finalText);
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "I found some information for " + message + " on Google";
         speak(finalText);
     }
 }
+
+// Initialization
+speak("Initializing JARVIS...");
+wishMe();
