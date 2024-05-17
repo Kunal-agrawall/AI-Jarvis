@@ -61,6 +61,21 @@ function takeCommand(message) {
     } else if (message.includes("open facebook")) {
         window.open("https://facebook.com", "_blank");
         speak("Opening Facebook...");
+    } else if (message.includes("open instagram")) {
+        window.open("https://instagram.com", "_blank");
+        speak("Opening Instagram...");
+    } else if (message.includes("open github")) {
+        window.open("https://github.com", "_blank");
+        speak("Opening Github...");
+    } else if (message.includes("open linkedin")) {
+        window.open("https://linkedin.com", "_blank");
+        speak("Opening Linkedin...");
+    } else if (message.includes("open twitter")) {
+        window.open("https://twitter.com", "_blank");
+        speak("Opening Twitter...");
+    } else if (message.includes("open stackoverflow")) {
+        window.open("https://stackoverflow.com", "_blank");
+        speak("Opening Stackoverflow...");
     }     else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "This is what I found on the internet regarding " + message;
