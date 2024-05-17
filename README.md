@@ -8,15 +8,12 @@ This code sets up a basic virtual assistant named JARVIS, capable of responding 
 
 ## Table of content
 * [Title & Description](#Title&Description)
-* [Screenshots](#screenshots)
 * [Key-Feature](#Key-Feature)
 * [Insatallation](#Installation)
 * [Technology Used](#Tech-used)
 * [Project Status](#Project)
 * [Contact](#contact)
 ## Screenshot
-
-![Example screenshot](https://www.yberryinfotainment.in/wp-content/uploads/2016/10/Effects-of-Virtual-Assistance-yberryinfosystem.com_.png)
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
