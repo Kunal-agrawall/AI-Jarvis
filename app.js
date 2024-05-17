@@ -4,9 +4,9 @@ const content = document.querySelector('.content');
 function speak(text) {
     const text_speak = new SpeechSynthesisUtterance(text);
 
-    text_speak.rate = 1;
-    text_speak.volume = 1;
-    text_speak.pitch = 1;
+    text_speak.rate = 1.5;
+    text_speak.volume = 2;
+    text_speak.pitch = 0;
 
     window.speechSynthesis.speak(text_speak);
 }
@@ -85,7 +85,8 @@ function takeCommand(message) {
             window.open('WordPad:///');
             const finalText = 'Opening Word Pad';
             speak(finalText);    
-    } else {
+    }
+    else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "I found some information for " + message + " on Google";
         speak(finalText);
