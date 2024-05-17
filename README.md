@@ -63,7 +63,7 @@ If you are interested to contribute in this project how to start contribute
 
 3. Add a remote upstream to the original repo. To add a remote upstream, run the following command in your terminal:
 ```
-git remote add upstream https://github.com/Durgesh4993/PACKABUNCHAS/
+git remote add upstream <your-github repo>
 ```
 
 4. Create a new branch. To create a new branch, run the following command in your terminal:
