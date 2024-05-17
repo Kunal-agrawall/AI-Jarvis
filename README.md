@@ -58,7 +58,7 @@ If you are interested to contribute in this project how to start contribute
 2. After forking, clone the repo to your local machine. To clone the repo to your local machine, run the following command in your terminal:
 
   ```bash
-   git clone https://github.com/<your-github-username>/PACKABUNCHAS
+   git clone https://github.com/<your-github-username>
 ```
 
 3. Add a remote upstream to the original repo. To add a remote upstream, run the following command in your terminal:
