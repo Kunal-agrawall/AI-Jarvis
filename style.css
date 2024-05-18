@@ -46,7 +46,7 @@
     margin-bottom: 40px;
 }
 
-.main .input {
+.main .talk {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,4 +78,14 @@
     color: #aed0d0;
     font-size: 15px;
     margin-right: 20px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.talk:hover{
+    cursor: pointer;
 }
