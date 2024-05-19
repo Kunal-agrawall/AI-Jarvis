@@ -16,6 +16,25 @@
     align-items: center;
     justify-content: center;
 }
+.logo-container {
+    position: absolute;
+    top: 10px;  /* Adjust based on your design requirements */
+    left: 10px; /* Adjust based on your design requirements */
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    height: 20px; /* Adjust the size as needed */
+    width: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.company-name {
+    font-size: 16px; /* Adjust based on your design requirements */
+    color: white; /* Adjust color based on your theme */
+}
+
 
 .main .image-container {
     padding: 10px;
@@ -29,9 +48,10 @@
 }
 
 .main .image-container .image img {
-    width: 350px;
-    align-items: center;
+    width: 500px;
+    margin-top: -20px; /* Adjust this value to move the image up or down */
 }
+
 
 .main .image-container h1 {
     color: #00bcd4;
@@ -45,37 +65,42 @@
     text-align: center;
     margin-bottom: 40px;
 }
-
-.main .input {
+.input {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    height: 50px;
-    border-radius: 20px;
-    background: rgb(202 253 255 / 50%);
+    flex-direction: row; /* Aligns elements horizontally */
+    justify-content: center; /* Centers elements horizontally */
+    align-items: center; /* Centers elements vertically */
+    position: fixed; /* Keeps the input at the specified position regardless of scrolling */
+    bottom: 100px; /* Positions the input at the bottom */
+    left: 250px; /* Starts from the left edge */
+    right: 10px; /* Stretches to the right edge, helping center content */
+    margin: auto; /* Centers the container horizontally */
+    width: 40%; /* Takes full width to better center the content */
 }
 
-.main .input .talk {
-    background: transparent;
-    outline: none;
+.text-input {
+    width: 70%; 
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #00ccff;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.talk {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
     border: none;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.main .input .talk i {
-    font-size: 20px;
-    color: #aed0d0;
+.talk:hover {
+    background-color: hsl(0, 99%, 35%);
 }
 
-.main .input .content {
-    color: #aed0d0;
-    font-size: 15px;
-    margin-right: 20px;
+.fas {
+    color: rgb(0, 238, 255); 
 }
