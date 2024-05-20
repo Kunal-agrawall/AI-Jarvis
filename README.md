@@ -9,7 +9,7 @@ This code sets up a basic virtual assistant named JARVIS, capable of responding 
 ## Table of content
 * [Title & Description](#Title&Description)
 * [Key-Feature](#Key-Feature)
-* [Insatallation](#Installation)
+* [Installation](#Installation)
 * [Technology Used](#Tech-used)
 * [Project Status](#Project)
 * [Contact](#contact)
